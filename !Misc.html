@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Misc ROMs</title>
-  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.png" />
   <style>
     body {
       margin: 0;
@@ -22,7 +22,7 @@
 
     .topnav a,
     .dropbtn {
-      float: left;
+      /* Removed float:left, flex container handles layout */
       color: #f2f2f2;
       text-align: center;
       padding: 14px 16px;
@@ -31,6 +31,7 @@
       background: none;
       border: none;
       cursor: pointer;
+      user-select: none;
     }
 
     .topnav a:hover,
@@ -43,8 +44,9 @@
     }
 
     .dropdown {
-      float: left;
-      overflow: hidden;
+      /* Removed float:left, flex handles */
+      position: relative;
+      overflow: visible;
     }
 
     .dropdown-content {
@@ -53,6 +55,10 @@
       background-color: #333;
       min-width: 160px;
       z-index: 1;
+      top: 100%;
+      left: 0;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+      border-radius: 0 0 6px 6px;
     }
 
     .dropdown-content a {
@@ -61,6 +67,7 @@
       text-decoration: none;
       display: block;
       text-align: left;
+      user-select: none;
     }
 
     .dropdown-content a:hover {
@@ -84,7 +91,7 @@
       gap: 30px;
       padding: 20px;
       max-width: 1200px;
-      margin: 0 auto;
+      margin: 0 auto 40px;
     }
 
     .card {
@@ -105,6 +112,7 @@
       width: 100%;
       height: auto;
       border-radius: 6px;
+      user-select: none;
     }
 
     .card p {
@@ -128,9 +136,9 @@
       <div class="dropdown-content">
         <a href="https://bypass.pickledude448.repl.co/!Proxies.html">Main</a>
         <a href="https://bypass.pickledude448.repl.co/!Tsunami.html">Tsunami</a>
-        <a href="https://galaxy.hop.sh/web" target="_blank">Interstellar</a>
+        <a href="https://galaxy.hop.sh/web" target="_blank" rel="noopener noreferrer">Interstellar</a>
         <a href="https://bypass2.pickledude448.repl.co/!Ultraviolet.html">Ultraviolet</a> 
-        <a href="https://ultra-max.pickledude448.repl.co/" target="_blank">Ultra-Max</a>
+        <a href="https://ultra-max.pickledude448.repl.co/" target="_blank" rel="noopener noreferrer">Ultra-Max</a>
       </div>
     </div>
     <a href="https://bypass.pickledude448.repl.co/!Webretro.html">Webretro</a>
@@ -141,7 +149,7 @@
         <a href="!Pokemon.html">Pokemon</a>
         <a href="!Mario.html">Super Mario</a>
         <a href="!LOZ.html">LOZ</a>
-        <a href="!Misc.html">Misc.</a>
+        <a href="!Misc.html" class="active">Misc.</a>
       </div>
     </div>
     <div class="dropdown">
@@ -163,70 +171,70 @@
 
     <a href="Monopoly (U) (V1.0) [!].zip" download>
       <div class="card">
-        <img src="Monopoly.jpg" alt="Monopoly">
+        <img src="Monopoly.jpg" alt="Monopoly" />
         <p>Monopoly (NES)</p>
       </div>
     </a>
 
     <a href="Excitebike.zip" download>
       <div class="card">
-        <img src="Excitebike.jpeg" alt="Excitebike">
+        <img src="Excitebike.jpeg" alt="Excitebike" />
         <p>Excitebike (NES)</p>
       </div>
     </a>
 
     <a href="Mike Tyson's Punch-Out!! (U) (PRG 1) [h1].zip" download>
       <div class="card">
-        <img src="Punch Out.jpeg" alt="Punch-Out!!">
+        <img src="Punch Out.jpeg" alt="Punch-Out!!" />
         <p>Mike Tyson's Punch-Out!!</p>
       </div>
     </a>
 
     <a href="Excitebike 64.zip" download>
       <div class="card">
-        <img src="Excitebike 64.jpeg" alt="Excitebike 64">
+        <img src="Excitebike 64.jpeg" alt="Excitebike 64" />
         <p>Excitebike 64</p>
       </div>
     </a>
 
     <a href="Bomberman 64.zip" download>
       <div class="card">
-        <img src="Bomberman 64.jpeg" alt="Bomberman 64">
+        <img src="Bomberman 64.jpeg" alt="Bomberman 64" />
         <p>Bomberman 64</p>
       </div>
     </a>
 
     <a href="GoldenEye 007.zip" download>
       <div class="card">
-        <img src="Goldeneye 007.jpeg" alt="GoldenEye 007">
+        <img src="Goldeneye 007.jpeg" alt="GoldenEye 007" />
         <p>GoldenEye 007</p>
       </div>
     </a>
 
     <a href="Doom 64.zip" download>
       <div class="card">
-        <img src="Doom 64.jpeg" alt="Doom 64">
+        <img src="Doom 64.jpeg" alt="Doom 64" />
         <p>Doom 64</p>
       </div>
     </a>
 
     <a href="Doom.zip" download>
       <div class="card">
-        <img src="Doom.jpeg" alt="Doom GBA">
+        <img src="Doom.jpeg" alt="Doom GBA" />
         <p>Doom (GBA)</p>
       </div>
     </a>
 
     <a href="1942.zip" download>
       <div class="card">
-        <img src="1942.jpeg" alt="1942">
+        <img src="1942.jpeg" alt="1942" />
         <p>1942 (NES)</p>
       </div>
     </a>
 
     <a href="1943_ The Battle of Midway.zip" download>
       <div class="card">
-        <img src="1943.jpeg" alt="1943 - The Battle of Midway">
+        <img src="1943.jpeg" alt="1943 - The Battle of Midway" />
         <p>1943: The Battle of Midway</p>
       </div>
     </a>
