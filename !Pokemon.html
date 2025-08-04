@@ -1,156 +1,154 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Pokemon</title>
-  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <meta charset="UTF-8" />
+  <title>Pokemon ROMs</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png" />
   <style>
+    :root {
+      --bg-dark: #111;
+      --text-light: #eee;
+      --primary: #007bff;
+      --accent: #ff4081;
+    }
+
     body {
-      background-color: #000000;
-      color: #FFFFFF;
-      font-weight: normal;
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      text-align: center;
     }
 
     .topnav {
-      background-color: #333;
-      overflow: hidden;
       display: flex;
-      align-items: center;
-      padding: 0 10px;
       flex-wrap: wrap;
+      justify-content: center;
+      background-color: #222;
+      padding: 10px 0;
     }
 
-    /* Style the links inside the navigation bar */
     .topnav a,
     .dropbtn {
-      color: #f2f2f2;
-      padding: 14px 16px;
+      color: white;
+      padding: 12px 18px;
       text-decoration: none;
-      font-size: 17px;
+      font-size: 16px;
       background: none;
       border: none;
       cursor: pointer;
     }
 
-    /* Change the color of links on hover */
     .topnav a:hover,
     .dropdown:hover .dropbtn {
-      background-color: red;
-      color: white;
+      background-color: #444;
     }
 
-    /* Add a color to the active/current link */
-    .topnav a.active {
-      background-color: #050505;
-      color: white;
-    }
-
-    /* Dropdown container */
     .dropdown {
       position: relative;
-      display: inline-block;
-      overflow: visible;
     }
 
-    /* Dropdown content (hidden by default) */
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-      z-index: 1;
+      top: 42px;
       left: 0;
-      top: 100%;
+      background-color: #333;
+      min-width: 160px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      z-index: 1;
     }
 
-    /* Links inside the dropdown */
     .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
       display: block;
+      color: #eee;
+      padding: 12px;
       text-align: left;
     }
 
-    /* Add a grey background color to dropdown links on hover */
     .dropdown-content a:hover {
-      background-color: #ddd;
+      background-color: #555;
     }
 
-    /* Show the dropdown menu on hover */
     .dropdown:hover .dropdown-content {
       display: block;
     }
 
-    table {
-      margin-top: 20px;
-      border-collapse: collapse;
-      width: 100%;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    td {
-      padding: 10px;
-      text-align: center;
-    }
-
-    img {
-      height: 200px;
-      width: 200px;
-      object-fit: cover;
-      cursor: pointer;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      transition: transform 0.3s ease;
-    }
-
-    img:hover {
-      transform: scale(1.05);
-      border-color: red;
-    }
-
-    h3 {
-      text-align: center;
+    h1 {
       margin-top: 30px;
-      font-weight: normal;
+      font-size: 3em;
+      color: var(--primary);
+    }
+
+    .section {
+      margin: 40px auto;
+      max-width: 1200px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      width: 220px;
+      padding: 20px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease;
+      color: var(--text-light);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      font-size: 0.95em;
+      margin: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
   </style>
 </head>
-
 <body>
+
+  <!-- Navigation Bar (template identical) -->
   <div class="topnav">
     <a href="https://bypass.pickledude448.repl.co/index.html">Home</a>
     <div class="dropdown">
-      <button class="dropbtn">Proxies
-      </button>
+      <button class="dropbtn">Proxies</button>
       <div class="dropdown-content">
         <a href="https://bypass.pickledude448.repl.co/!Proxies.html">Main</a>
         <a href="https://bypass.pickledude448.repl.co/!Tsunami.html">Tsunami</a>
         <a href="https://galaxy.hop.sh/web" target="_blank">Interstellar</a>
-        <a href="https://bypass.pickledude448.repl.co/!Ultraviolet.html">Ultraviolet</a>
+        <a href="https://bypass.pickledude448.repl.co/!Ultraviolet.html">Ultraviolet</a> 
         <a href="https://ultra-max.pickledude448.repl.co/" target="_blank">Ultra-Max</a>
       </div>
     </div>
     <a href="https://bypass.pickledude448.repl.co/!Webretro.html">Webretro</a>
     <div class="dropdown">
-      <button class="dropbtn">Roms
-      </button>
+      <button class="dropbtn">Roms</button>
       <div class="dropdown-content">
-        <a href="https://bypass.pickledude448.repl.co/!Roms.html">Main</a>
-        <a href="https://roms.pickledude448.repl.co/!Pokemon.html">Pokemon</a>
-        <a href="https://roms.pickledude448.repl.co/!Mario.html">Super Mario</a>
-        <a href="https://roms.pickledude448.repl.co/!LOZ.html">LOZ</a>
-        <a href="https://roms.pickledude448.repl.co/!Misc.html">Misc.</a>
+        <a href="https://theOriginal448.github.io/Bypass/!Roms.html">Main</a>
+        <a href="!Pokemon.html">Pokemon</a>
+        <a href="!Mario.html">Super Mario</a>
+        <a href="!LOZ.html">LOZ</a>
+        <a href="!Misc.html">Misc.</a>
       </div>
     </div>
     <div class="dropdown">
-      <button class="dropbtn">Games
-      </button>
+      <button class="dropbtn">Games</button>
       <div class="dropdown-content">
         <a href="https://bypass.pickledude448.repl.co/!Games.html">Main</a>
         <a href="https://bypass.pickledude448.repl.co/!nonblocked.html">Unblocked</a>
@@ -160,34 +158,107 @@
     <a href="https://bypass.pickledude448.repl.co/!about.html">About</a>
   </div>
 
-  <h3>
-    <table>
-      <tr>
-        <td><a href="Pokemon_ Ruby Version.zip" download><img src="Pokemon RUby.jpeg" alt="Pokemon-Ruby"></a></td>
-        <td><a href="Pokemon_ Sapphire Version.zip" download><img src="Pokemon spphire.jpeg" alt="Pokemon-Sapphire"></a></td>
-        <td><a href="Pokemon - Platinum Version (USA) (Rev 1).zip" download><img src="Pokemon Platinum.jpeg" alt="Pokemon-Platinum"></a></td>
-      </tr>
-      <tr>
-        <td><a href="Pokemon_ Diamond Version.zip" download><img src="Pokemon Diamond.jpeg" alt="Pokemon-Diamond"></a></td>
-        <td><a href="Pokemon_ Pearl Version.zip" download><img src="Pokemon pearl.jpeg" alt="Pokemon-Pearl"></a></td>
-        <td><a href="Pokemon - Emerald Version (USA, Europe).zip" download><img src="Pokemon Emerald.jpeg" alt="Pokemon-Emerald"></a></td>
-      </tr>
-      <tr>
-        <td><a href="Pokemon_ FireRed Version.zip" download><img src="PokemonFireRed.jpg" alt="Pokemon-FireRed"></a></td>
-        <td><a href="Pokemon - Leaf Green Version (U) (V1.1).zip" download><img src="PokemonLeafGreen.jpg" alt="Pokemon-LeafGreen"></a></td>
-        <td><a href="Pokemon_ Black Version.zip" download><img src="PokemonB.jpg" alt="Pokemon-Black"></a></td>
-      </tr>
-      <tr>
-        <td><a href="Pokemon_ HeartGold Version.zip" download><img src="HeartGold.jpeg" alt="Pokemon Heartgold"></a></td>
-        <td><a href="Pokemon - SoulSilver Version (USA).zip" download><img src="SoulSilver.jpeg" alt="Pokemon Blue"></a></td>
-        <td><a href="Pokemon_ Red Version.zip" download><img src="Pokemon Red.jpeg" alt="Pokemon Red"></a></td>
-      </tr>
-      <tr>
-        <td><a href="Pokemon_ Blue Version.zip" download><img src="Pokemon Blue.jpeg" alt="Pokemon Blue"></a></td>
-        <td><a href="Pokemon_ Gold Version.zip" download><img src="Pokemon gold.jpeg" alt="Pokemon Gold"></a></td>
-      </tr>
-    </table>
-  </h3>
-</body>
+  <h1>Pokemon ROMs</h1>
 
+  <div class="section">
+    <a href="Pokemon_ Ruby Version.zip" download>
+      <div class="card">
+        <img src="Pokemon RUby.jpeg" alt="Pokemon Ruby" />
+        <p>Pokemon Ruby (GBA)</p>
+      </div>
+    </a>
+
+    <a href="Pokemon_ Sapphire Version.zip" download>
+      <div class="card">
+        <img src="Pokemon spphire.jpeg" alt="Pokemon Sapphire" />
+        <p>Pokemon Sapphire (GBA)</p>
+      </div>
+    </a>
+
+    <a href="Pokemon - Platinum Version (USA) (Rev 1).zip" download>
+      <div class="card">
+        <img src="Pokemon Platinum.jpeg" alt="Pokemon Platinum" />
+        <p>Pokemon Platinum (DS)</p>
+      </div>
+    </a>
+
+    <a href="Pokemon_ Diamond Version.zip" download>
+      <div class="card">
+        <img src="Pokemon Diamond.jpeg" alt="Pokemon Diamond" />
+        <p>Pokemon Diamond (DS)</p>
+      </div>
+    </a>
+
+    <a href="Pokemon_ Pearl Version.zip" download>
+      <div class="card">
+        <img src="Pokemon pearl.jpeg" alt="Pokemon Pearl" />
+        <p>Pokemon Pearl (DS)</p>
+      </div>
+    </a>
+
+    <a href="Pokemon - Emerald Version (USA, Europe).zip" download>
+      <div class="card">
+        <img src="Pokemon Emerald.jpeg" alt="Pokemon Emerald" />
+        <p>Pokemon Emerald (GBA)</p>
+      </div>
+    </a>
+
+    <a href="Pokemon_ FireRed Version.zip" download>
+      <div class="card">
+        <img src="PokemonFireRed.jpg" alt="Pokemon FireRed" />
+        <p>Pokemon FireRed (GBA)</p>
+      </div>
+    </a>
+
+    <a href="Pokemon - Leaf Green Version (U) (V1.1).zip" download>
+      <div class="card">
+        <img src="PokemonLeafGreen.jpg" alt="Pokemon LeafGreen" />
+        <p>Pokemon LeafGreen (GBA)</p>
+      </div>
+    </a>
+
+    <a href="Pokemon_ Black Version.zip" download>
+      <div class="card">
+        <img src="PokemonB.jpg" alt="Pokemon Black" />
+        <p>Pokemon Black (DS)</p>
+      </div>
+    </a>
+
+    <a href="Pokemon_ HeartGold Version.zip" download>
+      <div class="card">
+        <img src="HeartGold.jpeg" alt="Pokemon HeartGold" />
+        <p>Pokemon HeartGold (DS)</p>
+      </div>
+    </a>
+
+    <a href="Pokemon - SoulSilver Version (USA).zip" download>
+      <div class="card">
+        <img src="SoulSilver.jpeg" alt="Pokemon SoulSilver" />
+        <p>Pokemon SoulSilver (DS)</p>
+      </div>
+    </a>
+
+    <a href="Pokemon_ Red Version.zip" download>
+      <div class="card">
+        <img src="Pokemon Red.jpeg" alt="Pokemon Red" />
+        <p>Pokemon Red (GB)</p>
+      </div>
+    </a>
+
+    <a href="Pokemon_ Blue Version.zip" download>
+      <div class="card">
+        <img src="Pokemon Blue.jpeg" alt="Pokemon Blue" />
+        <p>Pokemon Blue (GB)</p>
+      </div>
+    </a>
+
+    <a href="Pokemon_ Gold Version.zip" download>
+      <div class="card">
+        <img src="Pokemon gold.jpeg" alt="Pokemon Gold" />
+        <p>Pokemon Gold (GB)</p>
+      </div>
+    </a>
+  </div>
+
+</body>
 </html>
