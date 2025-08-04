@@ -5,25 +5,21 @@
   <title>Pokemon</title>
   <link rel="icon" type="image/x-icon" href="favicon.png">
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #000000;
       color: #FFFFFF;
       font-weight: normal;
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
 
     .topnav {
       background-color: #333;
+      overflow: hidden;
       display: flex;
+      align-items: center;
+      padding: 0 10px;
       flex-wrap: wrap;
-      justify-content: center;
-      position: relative;
-      z-index: 10;
     }
 
     /* Style the links inside the navigation bar */
@@ -41,7 +37,7 @@
     /* Change the color of links on hover */
     .topnav a:hover,
     .dropdown:hover .dropbtn {
-      background-color: #505050;
+      background-color: red;
       color: white;
     }
 
@@ -51,9 +47,9 @@
       color: white;
     }
 
-    /* The dropdown container */
+    /* Dropdown container */
     .dropdown {
-      position: relative; /* Fix: for absolute positioning of dropdown-content */
+      position: relative;
       display: inline-block;
       overflow: visible;
     }
@@ -62,17 +58,17 @@
     .dropdown-content {
       display: none;
       position: absolute;
-      top: 100%; /* Position below the dropdown button */
-      left: 0;
-      background-color: #333;
+      background-color: #f9f9f9;
       min-width: 160px;
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-      z-index: 1000;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      left: 0;
+      top: 100%;
     }
 
     /* Links inside the dropdown */
     .dropdown-content a {
-      color: white;
+      color: black;
       padding: 12px 16px;
       text-decoration: none;
       display: block;
@@ -81,12 +77,47 @@
 
     /* Add a grey background color to dropdown links on hover */
     .dropdown-content a:hover {
-      background-color: #444;
+      background-color: #ddd;
     }
 
     /* Show the dropdown menu on hover */
     .dropdown:hover .dropdown-content {
       display: block;
+    }
+
+    table {
+      margin-top: 20px;
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    img {
+      height: 200px;
+      width: 200px;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+      border-color: red;
+    }
+
+    h3 {
+      text-align: center;
+      margin-top: 30px;
+      font-weight: normal;
     }
   </style>
 </head>
@@ -132,42 +163,28 @@
   <h3>
     <table>
       <tr>
-        <td><a href="Pokemon_ Ruby Version.zip" download><img src="Pokemon RUby.jpeg" alt="Pokemon-Ruby" height="200"
-              width="200"></a></td>
-        <td><a href="Pokemon_ Sapphire Version.zip" download><img src="Pokemon spphire.jpeg" alt="Pokemon-Sapphire"
-              height="200" width="200"></a></td>
-        <td><a href="Pokemon - Platinum Version (USA) (Rev 1).zip" download><img src="Pokemon Platinum.jpeg"
-              alt="Pokemon-Platinum" height="200" width="200"></a></td>
+        <td><a href="Pokemon_ Ruby Version.zip" download><img src="Pokemon RUby.jpeg" alt="Pokemon-Ruby"></a></td>
+        <td><a href="Pokemon_ Sapphire Version.zip" download><img src="Pokemon spphire.jpeg" alt="Pokemon-Sapphire"></a></td>
+        <td><a href="Pokemon - Platinum Version (USA) (Rev 1).zip" download><img src="Pokemon Platinum.jpeg" alt="Pokemon-Platinum"></a></td>
       </tr>
       <tr>
-        <td><a href="Pokemon_ Diamond Version.zip" download><img src="Pokemon Diamond.jpeg" alt="Pokemon-Diamond"
-              height="200" width="200"></a></td>
-        <td><a href="Pokemon_ Pearl Version.zip" download><img src="Pokemon pearl.jpeg" alt="Pokemon-Pearl" height="200"
-              width="200"></a></td>
-        <td><a href="Pokemon - Emerald Version (USA, Europe).zip" download><img src="Pokemon Emerald.jpeg"
-              alt="Pokemon-Emerald" height="200" width="200"></a></td>
+        <td><a href="Pokemon_ Diamond Version.zip" download><img src="Pokemon Diamond.jpeg" alt="Pokemon-Diamond"></a></td>
+        <td><a href="Pokemon_ Pearl Version.zip" download><img src="Pokemon pearl.jpeg" alt="Pokemon-Pearl"></a></td>
+        <td><a href="Pokemon - Emerald Version (USA, Europe).zip" download><img src="Pokemon Emerald.jpeg" alt="Pokemon-Emerald"></a></td>
       </tr>
       <tr>
-        <td><a href="Pokemon_ FireRed Version.zip" download><img src="PokemonFireRed.jpg" alt="Pokemon-FireRed"
-              height="200" width="200"></a></td>
-        <td><a href="Pokemon - Leaf Green Version (U) (V1.1).zip" download><img src="PokemonLeafGreen.jpg"
-              alt="Pokemon-LeafGreen" height="200" width="200"></a></td>
-        <td><a href="Pokemon_ Black Version.zip" download><img src="PokemonB.jpg" alt="Pokemon-Black" height="200"
-              width="200"></a></td>
+        <td><a href="Pokemon_ FireRed Version.zip" download><img src="PokemonFireRed.jpg" alt="Pokemon-FireRed"></a></td>
+        <td><a href="Pokemon - Leaf Green Version (U) (V1.1).zip" download><img src="PokemonLeafGreen.jpg" alt="Pokemon-LeafGreen"></a></td>
+        <td><a href="Pokemon_ Black Version.zip" download><img src="PokemonB.jpg" alt="Pokemon-Black"></a></td>
       </tr>
       <tr>
-        <td><a href="Pokemon_ HeartGold Version.zip" download><img src="HeartGold.jpeg" alt="Pokemon Heartgold"
-              height="200" width="200"></a></td>
-        <td><a href="Pokemon - SoulSilver Version (USA).zip" download><img src="SoulSilver.jpeg" alt="Pokemon Blue"
-              height="200" width="200"></a></td>
-        <td><a href="Pokemon_ Red Version.zip" download><img src="Pokemon Red.jpeg" alt="Pokemon Red" height="200"
-              width="200"></a></td>
+        <td><a href="Pokemon_ HeartGold Version.zip" download><img src="HeartGold.jpeg" alt="Pokemon Heartgold"></a></td>
+        <td><a href="Pokemon - SoulSilver Version (USA).zip" download><img src="SoulSilver.jpeg" alt="Pokemon Blue"></a></td>
+        <td><a href="Pokemon_ Red Version.zip" download><img src="Pokemon Red.jpeg" alt="Pokemon Red"></a></td>
       </tr>
       <tr>
-        <td><a href="Pokemon_ Blue Version.zip" download><img src="Pokemon Blue.jpeg" alt="Pokemon Blue" height="200"
-              width="200"></a></td>
-        <td><a href="Pokemon_ Gold Version.zip" download><img src="Pokemon gold.jpeg" alt="Pokemon Gold" height="200"
-              width="200"></a></td>
+        <td><a href="Pokemon_ Blue Version.zip" download><img src="Pokemon Blue.jpeg" alt="Pokemon Blue"></a></td>
+        <td><a href="Pokemon_ Gold Version.zip" download><img src="Pokemon gold.jpeg" alt="Pokemon Gold"></a></td>
       </tr>
     </table>
   </h3>
