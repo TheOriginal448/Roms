@@ -12,55 +12,64 @@
       color: #eee;
     }
 
+    /* Navbar container */
     .topnav {
       background-color: #333;
-      overflow: hidden;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      list-style: none;
     }
 
-    .topnav a,
-    .dropbtn {
-      /* Removed float:left, flex container handles layout */
+    /* Top-level links */
+    .topnav > a,
+    .dropdown > a {
       color: #f2f2f2;
-      text-align: center;
       padding: 14px 16px;
       text-decoration: none;
       font-size: 17px;
-      background: none;
-      border: none;
+      display: block;
       cursor: pointer;
       user-select: none;
+      transition: background-color 0.3s ease;
     }
 
-    .topnav a:hover,
-    .dropdown:hover .dropbtn {
-      background-color: #505050;
-    }
-
-    .topnav a.active {
+    /* Active link background */
+    .topnav > a.active,
+    .dropdown > a.active {
       background-color: #050505;
     }
 
-    .dropdown {
-      /* Removed float:left, flex handles */
-      position: relative;
-      overflow: visible;
+    /* Hover effect */
+    .topnav > a:hover,
+    .dropdown:hover > a {
+      background-color: #505050;
     }
 
+    /* Dropdown container */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown content */
     .dropdown-content {
       display: none;
       position: absolute;
       background-color: #333;
       min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
       z-index: 1;
+      border-radius: 0 0 6px 6px;
+      margin-top: 0;
       top: 100%;
       left: 0;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-      border-radius: 0 0 6px 6px;
     }
 
+    /* Dropdown links */
     .dropdown-content a {
       color: white;
       padding: 12px 16px;
@@ -68,12 +77,15 @@
       display: block;
       text-align: left;
       user-select: none;
+      transition: background-color 0.3s ease;
     }
 
+    /* Dropdown links hover */
     .dropdown-content a:hover {
       background-color: #555;
     }
 
+    /* Show dropdown on hover */
     .dropdown:hover .dropdown-content {
       display: block;
     }
@@ -131,19 +143,22 @@
   <!-- Navigation Bar -->
   <div class="topnav">
     <a href="https://bypass.pickledude448.repl.co/index.html">Home</a>
+
     <div class="dropdown">
-      <button class="dropbtn">Proxies</button>
+      <a href="javascript:void(0)">Proxies</a>
       <div class="dropdown-content">
         <a href="https://bypass.pickledude448.repl.co/!Proxies.html">Main</a>
         <a href="https://bypass.pickledude448.repl.co/!Tsunami.html">Tsunami</a>
         <a href="https://galaxy.hop.sh/web" target="_blank" rel="noopener noreferrer">Interstellar</a>
-        <a href="https://bypass2.pickledude448.repl.co/!Ultraviolet.html">Ultraviolet</a> 
+        <a href="https://bypass2.pickledude448.repl.co/!Ultraviolet.html">Ultraviolet</a>
         <a href="https://ultra-max.pickledude448.repl.co/" target="_blank" rel="noopener noreferrer">Ultra-Max</a>
       </div>
     </div>
+
     <a href="https://bypass.pickledude448.repl.co/!Webretro.html">Webretro</a>
+
     <div class="dropdown">
-      <button class="dropbtn">Roms</button>
+      <a href="javascript:void(0)" class="active">Roms</a>
       <div class="dropdown-content">
         <a href="https://theoriginal448.github.io/Bypass/!Roms.html">Main</a>
         <a href="!Pokemon.html">Pokemon</a>
@@ -152,14 +167,16 @@
         <a href="!Misc.html" class="active">Misc.</a>
       </div>
     </div>
+
     <div class="dropdown">
-      <button class="dropbtn">Games</button>
+      <a href="javascript:void(0)">Games</a>
       <div class="dropdown-content">
         <a href="https://bypass.pickledude448.repl.co/!Games.html">Main</a>
         <a href="https://bypass.pickledude448.repl.co/!nonblocked.html">Unblocked</a>
         <a href="https://bypass.pickledude448.repl.co/!Blocked.html">Blocked</a>
       </div>
     </div>
+
     <a href="https://bypass.pickledude448.repl.co/!about.html">About</a>
   </div>
 
@@ -168,7 +185,6 @@
 
   <!-- ROM Cards -->
   <div class="section">
-
     <a href="Monopoly (U) (V1.0) [!].zip" download>
       <div class="card">
         <img src="Monopoly.jpg" alt="Monopoly" />
@@ -238,7 +254,6 @@
         <p>1943: The Battle of Midway</p>
       </div>
     </a>
-
   </div>
 </body>
 </html>
