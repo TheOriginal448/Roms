@@ -1,111 +1,144 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Mario</title>
+  <meta charset="UTF-8">
+  <title>Super Mario ROMs</title>
   <link rel="icon" type="image/x-icon" href="favicon.png">
   <style>
-    .topnav {
-      background-color: #333;
-      overflow: hidden;
+    :root {
+      --bg-dark: #111;
+      --text-light: #eee;
+      --primary: #007bff;
+      --accent: #ff4081;
     }
 
-    /* Style the links inside the navigation bar */
-    .topnav a {
-      float: left;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 17px;
-    }
-
-    /* Change the color of links on hover */
-    .topnav a:hover {
-      background-color: #505050;
-      color: white;
-    }
-
-    /* Add a color to the active/current link */
-    .topnav a.active {
-      background-color: #050505;
-      color: white;
-    }
-    /* The dropdown container */
-    .dropdown {
-      float: left;
-      overflow: hidden;
-    }
-
-    /* Dropdown button */
-    .dropdown .dropbtn {
-      font-size: 16px;
-      border: none;
-      outline: none;
-      color: white;
-      padding: 14px 16px;
-      background-color: inherit;
-      font-family: inherit;
-      /* Important for vertical align on mobile phones */
+    body {
       margin: 0;
-      /* Important for vertical align on mobile phones */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      text-align: center;
     }
 
-    /* Add a red background color to navbar links on hover */
-    .navbar a:hover,
+    .topnav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #222;
+      padding: 10px 0;
+    }
+
+    .topnav a,
+    .dropbtn {
+      color: white;
+      padding: 12px 18px;
+      text-decoration: none;
+      font-size: 16px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .topnav a:hover,
     .dropdown:hover .dropbtn {
-      background-color: red;
+      background-color: #444;
     }
 
-    /* Dropdown content (hidden by default) */
+    .dropdown {
+      position: relative;
+    }
+
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #f9f9f9;
+      top: 42px;
+      left: 0;
+      background-color: #333;
       min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       z-index: 1;
     }
 
-    /* Links inside the dropdown */
     .dropdown-content a {
-      float: none;
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
       display: block;
+      color: #eee;
+      padding: 12px;
       text-align: left;
     }
 
-    /* Add a grey background color to dropdown links on hover */
     .dropdown-content a:hover {
-      background-color: #ddd;
+      background-color: #555;
     }
 
-    /* Show the dropdown menu on hover */
     .dropdown:hover .dropdown-content {
       display: block;
     }
+
+    h1 {
+      margin-top: 30px;
+      font-size: 3em;
+      color: var(--primary);
+    }
+
+    .section {
+      margin: 40px auto;
+      max-width: 1200px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      width: 220px;
+      padding: 20px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      font-size: 0.95em;
+      margin: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
   </style>
 </head>
-<body bgcolor="#000000">
+<body>
+
+  <!-- Navigation Bar (Template Identical) -->
   <div class="topnav">
     <a href="https://bypass.pickledude448.repl.co/index.html">Home</a>
     <div class="dropdown">
-      <button class="dropbtn">Proxies
-      </button>
+      <button class="dropbtn">Proxies</button>
       <div class="dropdown-content">
         <a href="https://bypass.pickledude448.repl.co/!Proxies.html">Main</a>
         <a href="https://bypass.pickledude448.repl.co/!Tsunami.html">Tsunami</a>
-<a href="https://galaxy.hop.sh/web" target="_blank">Interstellar</a>
+        <a href="https://galaxy.hop.sh/web" target="_blank">Interstellar</a>
         <a href="https://bypass.pickledude448.repl.co/!Ultraviolet.html">Ultraviolet</a> 
         <a href="https://ultra-max.pickledude448.repl.co/" target="_blank">Ultra-Max</a>
       </div>
-       </div>
+    </div>
     <a href="https://bypass.pickledude448.repl.co/!Webretro.html">Webretro</a>
     <div class="dropdown">
-      <button class="dropbtn">Roms
-      </button>
+      <button class="dropbtn">Roms</button>
       <div class="dropdown-content">
         <a href="https://bypass.pickledude448.repl.co/!Roms.html">Main</a>
         <a href="https://roms.pickledude448.repl.co/!Pokemon.html">Pokemon</a>
@@ -115,50 +148,112 @@
       </div>
     </div>
     <div class="dropdown">
-      <button class="dropbtn">Games
-      </button>
+      <button class="dropbtn">Games</button>
       <div class="dropdown-content">
         <a href="https://bypass.pickledude448.repl.co/!Games.html">Main</a>
         <a href="https://bypass.pickledude448.repl.co/!nonblocked.html">Unblocked</a>
-    <a href="https://bypass.pickledude448.repl.co/!Blocked.html">Blocked</a>
+        <a href="https://bypass.pickledude448.repl.co/!Blocked.html">Blocked</a>
       </div>
-       </div>
+    </div>
     <a href="https://bypass.pickledude448.repl.co/!about.html">About</a>
   </div>
-  <table>
-    <tr>
-      <td><a href="Super Mario World (U) [!].zip" download><img src="Super Mario World.png"
-            alt="Super Mario World (SNES)" height="200" width="200"></a></td>
 
-      <td><a href="Mario Kart 64.zip" download><img src="Mario Kart 64.jpeg" alt="MK 64" height="200" width="200"></a></td>
+  <h1>Super Mario ROMs</h1>
 
-      <td><a href="Super Mario 64.zip" download><img src="Super Mario 64.jpeg" alt="Super Mario 64" height="200" width="200"></a></td>
-    </tr>
-    <tr>
-      <td><a href="Super Mario Bros. (World).zip" download><img src="Super Mario Bros.jpeg" alt="Super Mario Bros" height="200" width="200"></a>
-      </td>
+  <div class="section">
 
-      <td><a href="Super Mario Bros. 3.zip" download><img src="SMB 3.jpeg" alt="Super Mario Bros 3" height="200" width="200"></a></td>
-      <td><a href="Mario Kart DS.zip" download><img src="Screenshot 2023-03-08 7.50.35 AM.png" alt="Mario Kart DS" height="200" width="200"></a>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="Paper Mario.zip" download><img src="Paper Mario.jpeg" alt="Paper Mario" height="200" width="200"></a></td>
-      <td><a href="4171 - Mario & Luigi - Bowser's Inside Story (US)(M3)(XenoPhobia).7z" download><img src="Bowsers Inside Story.jpeg" alt="Bowsers Inside Story" height="200" width="200"></a></td>
+    <!-- Each card = one ROM -->
+    <a href="Super Mario World (U) [!].zip" download>
+      <div class="card">
+        <img src="Super Mario World.png" alt="Super Mario World">
+        <p>Super Mario World (SNES)</p>
+      </div>
+    </a>
 
-      <td><a href="Super Mario World 2 - Yoshi's Island (U) (V1.1).zip" download><img src="Yoshis island.jpeg"
-            alt="Yoshis Island" width="200"height="200" width="200"></a></td>
-    </tr>
-    <tr>
-      <td><a href="Mario Party.zip" download><img src="Super Mario Party 1.jpeg" alt="Mario Party 1" height="200" width="200"></a></td>
+    <a href="Mario Kart 64.zip" download>
+      <div class="card">
+        <img src="Mario Kart 64.jpeg" alt="Mario Kart 64">
+        <p>Mario Kart 64 (N64)</p>
+      </div>
+    </a>
 
-      <td><a href="Mario Party 2.zip" download><img src="Mario Party 2.jpeg" alt="Mario Party 2" height="200" width="200"></a></td>
-      <td><a href="Mario Party 3.zip" download><img src="Mario party 3e.jpeg" alt="Mario Party 3" height="200" width="200"></a></td>
-    </tr>
-    <tr>
-      <td><a href="Dr. Mario.zip" download><img src="Dr.Mario.jpeg" height="200" width="200"></a></td>
-    </tr>
-  </table>
+    <a href="Super Mario 64.zip" download>
+      <div class="card">
+        <img src="Super Mario 64.jpeg" alt="Super Mario 64">
+        <p>Super Mario 64 (N64)</p>
+      </div>
+    </a>
+
+    <a href="Super Mario Bros. (World).zip" download>
+      <div class="card">
+        <img src="Super Mario Bros.jpeg" alt="Super Mario Bros">
+        <p>Super Mario Bros (NES)</p>
+      </div>
+    </a>
+
+    <a href="Super Mario Bros. 3.zip" download>
+      <div class="card">
+        <img src="SMB 3.jpeg" alt="Super Mario Bros 3">
+        <p>Super Mario Bros. 3 (NES)</p>
+      </div>
+    </a>
+
+    <a href="Mario Kart DS.zip" download>
+      <div class="card">
+        <img src="Screenshot 2023-03-08 7.50.35 AM.png" alt="Mario Kart DS">
+        <p>Mario Kart DS</p>
+      </div>
+    </a>
+
+    <a href="Paper Mario.zip" download>
+      <div class="card">
+        <img src="Paper Mario.jpeg" alt="Paper Mario">
+        <p>Paper Mario (N64)</p>
+      </div>
+    </a>
+
+    <a href="4171 - Mario & Luigi - Bowser's Inside Story (US)(M3)(XenoPhobia).7z" download>
+      <div class="card">
+        <img src="Bowsers Inside Story.jpeg" alt="Bowser's Inside Story">
+        <p>Bowser’s Inside Story (NDS)</p>
+      </div>
+    </a>
+
+    <a href="Super Mario World 2 - Yoshi's Island (U) (V1.1).zip" download>
+      <div class="card">
+        <img src="Yoshis island.jpeg" alt="Yoshi's Island">
+        <p>Yoshi’s Island (SNES)</p>
+      </div>
+    </a>
+
+    <a href="Mario Party.zip" download>
+      <div class="card">
+        <img src="Super Mario Party 1.jpeg" alt="Mario Party 1">
+        <p>Mario Party (N64)</p>
+      </div>
+    </a>
+
+    <a href="Mario Party 2.zip" download>
+      <div class="card">
+        <img src="Mario Party 2.jpeg" alt="Mario Party 2">
+        <p>Mario Party 2 (N64)</p>
+      </div>
+    </a>
+
+    <a href="Mario Party 3.zip" download>
+      <div class="card">
+        <img src="Mario party 3e.jpeg" alt="Mario Party 3">
+        <p>Mario Party 3 (N64)</p>
+      </div>
+    </a>
+
+    <a href="Dr. Mario.zip" download>
+      <div class="card">
+        <img src="Dr.Mario.jpeg" alt="Dr. Mario">
+        <p>Dr. Mario (NES)</p>
+      </div>
+    </a>
+
+  </div>
 </body>
-
 </html>
