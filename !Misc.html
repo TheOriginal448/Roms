@@ -5,95 +5,79 @@
   <title>Misc ROMs</title>
   <link rel="icon" type="image/x-icon" href="favicon.png" />
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #000;
-      color: #eee;
+    :root {
+      --bg-dark: #111;
+      --text-light: #eee;
+      --primary: #007bff;
+      --accent: #ff4081;
     }
 
-    /* Navbar container */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      text-align: center;
+    }
+
     .topnav {
-      background-color: #333;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
-      padding: 0;
-      margin: 0;
-      list-style: none;
+      background-color: #222;
+      padding: 10px 0;
     }
 
-    /* Top-level links */
-    .topnav > a,
-    .dropdown > a {
-      color: #f2f2f2;
-      padding: 14px 16px;
+    .topnav a,
+    .dropbtn {
+      color: white;
+      padding: 12px 18px;
       text-decoration: none;
-      font-size: 17px;
-      display: block;
+      font-size: 16px;
+      background: none;
+      border: none;
       cursor: pointer;
-      user-select: none;
-      transition: background-color 0.3s ease;
     }
 
-    /* Active link background */
-    .topnav > a.active,
-    .dropdown > a.active {
-      background-color: #050505;
+    .topnav a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: #444;
     }
 
-    /* Hover effect */
-    .topnav > a:hover,
-    .dropdown:hover > a {
-      background-color: #505050;
-    }
-
-    /* Dropdown container */
     .dropdown {
       position: relative;
-      display: inline-block;
     }
 
-    /* Dropdown content */
     .dropdown-content {
       display: none;
       position: absolute;
+      top: 42px;
+      left: 0;
       background-color: #333;
       min-width: 160px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       z-index: 1;
-      border-radius: 0 0 6px 6px;
-      margin-top: 0;
-      top: 100%;
-      left: 0;
     }
 
-    /* Dropdown links */
     .dropdown-content a {
-      color: white;
-      padding: 12px 16px;
-      text-decoration: none;
       display: block;
+      color: #eee;
+      padding: 12px;
       text-align: left;
-      user-select: none;
-      transition: background-color 0.3s ease;
     }
 
-    /* Dropdown links hover */
     .dropdown-content a:hover {
       background-color: #555;
     }
 
-    /* Show dropdown on hover */
     .dropdown:hover .dropdown-content {
       display: block;
     }
 
     h1 {
-      text-align: center;
-      margin: 30px 0;
-      color: #ff4081;
+      margin-top: 30px;
+      font-size: 3em;
+      color: var(--accent);
     }
 
     .section {
@@ -107,13 +91,14 @@
     }
 
     .card {
-      background-color: #1a1a1a;
-      border-radius: 10px;
+      background-color: #1e1e1e;
+      border-radius: 12px;
       width: 220px;
       padding: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
       transition: transform 0.3s ease;
       text-align: center;
+      cursor: pointer;
     }
 
     .card:hover {
@@ -136,6 +121,10 @@
       color: inherit;
       text-decoration: none;
     }
+
+    a.active {
+      background-color: #333;
+    }
   </style>
 </head>
 <body>
@@ -145,7 +134,7 @@
     <a href="https://theoriginal448.github.io/Bypass/index.html">Home</a>
 
     <div class="dropdown">
-      <a href="javascript:void(0)">Proxies</a>
+      <button class="dropbtn">Proxies</button>
       <div class="dropdown-content">
         <a href="https://theoriginal448.github.io/Bypass/!Proxies.html">Main</a>
         <a href="https://theoriginal448.github.io/Bypass/!Tsunami.html">Tsunami</a>
@@ -158,7 +147,7 @@
     <a href="https://theoriginal448.github.io/Bypass/!Webretro.html">Webretro</a>
 
     <div class="dropdown">
-      <a href="javascript:void(0)" class="active">Roms</a>
+      <button class="dropbtn">Roms</button>
       <div class="dropdown-content">
         <a href="https://theoriginal448.github.io/Bypass/!Roms.html">Main</a>
         <a href="!Pokemon.html">Pokemon</a>
@@ -169,7 +158,7 @@
     </div>
 
     <div class="dropdown">
-      <a href="javascript:void(0)">Games</a>
+      <button class="dropbtn">Games</button>
       <div class="dropdown-content">
         <a href="https://theoriginal448.github.io/Bypass/!Games.html">Main</a>
         <a href="https://theoriginal448.github.io/Bypass/!nonblocked.html">Unblocked</a>
